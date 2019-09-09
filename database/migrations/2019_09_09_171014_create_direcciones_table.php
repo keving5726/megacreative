@@ -17,7 +17,7 @@ class CreateDireccionesTable extends Migration
             $table->bigIncrements('id');
 
             // ID del estudiante
-            $table->unsignedTinyInteger('estudiante_id');
+            $table->unsignedBigInteger('estudiante_id');
 
             // Pais donde vive el estudiante
             $table->string('pais', 100);
