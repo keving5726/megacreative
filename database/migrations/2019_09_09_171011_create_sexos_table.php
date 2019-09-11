@@ -19,7 +19,6 @@ class CreateSexosTable extends Migration
             // Tipo de sexo
             $table->string('tipo', 30);
 
-            $table->timestamps();
             $table->unique('tipo');
         });
     }

@@ -13,14 +13,10 @@ class StatusesTableSeeder extends Seeder
     {
         DB::table('statuses')->insert([
             'status' => 'Habilitado',
-            'created_at' => now(),
-            'updated_at' => now()
         ]);
 
         DB::table('statuses')->insert([
             'status' => 'Inhabilitado',
-            'created_at' => now(),
-            'updated_at' => now()
         ]);
     }
 }

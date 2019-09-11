@@ -19,7 +19,6 @@ class CreateStatusesTable extends Migration
             // Disponibilidad
             $table->string('status', 30);
 
-            $table->timestamps();
             $table->unique('status');
         });
     }

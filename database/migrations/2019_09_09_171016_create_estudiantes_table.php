@@ -37,11 +37,23 @@ class CreateEstudiantesTable extends Migration
             // Disponibilidad del estudiante
             $table->unsignedTinyInteger('status_id');
 
+            // Pais donde vive el estudiante
+            $table->unsignedTinyInteger('pais_id');
+
+            // Estado donde vive el estudiante
+            $table->unsignedTinyInteger('estado_id');
+
+            // Ciudad donde vive el estudiante
+            $table->unsignedTinyInteger('ciudad_id');
+
             $table->timestamps();
             $table->unique('email');
             $table->foreign('sexo_id')->references('id')->on('sexos');
-            $table->foreign('carrera_id')->references('id')->on('carreras');
+            $table->foreign('carrera_id')->references('id')->on('carreras')->onDelete('cascade');
             $table->foreign('status_id')->references('id')->on('statuses');
+            $table->foreign('pais_id')->references('id')->on('paises');
+            $table->foreign('estado_id')->references('id')->on('estados');
+            $table->foreign('ciudad_id')->references('id')->on('ciudades');
         });
     }
 

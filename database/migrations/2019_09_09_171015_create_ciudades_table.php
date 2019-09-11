@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCarrerasTable extends Migration
+class CreateCiudadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,13 @@ class CreateCarrerasTable extends Migration
      */
     public function up()
     {
-        Schema::create('carreras', function (Blueprint $table) {
+        Schema::create('ciudades', function (Blueprint $table) {
             $table->tinyIncrements('id');
 
-            // Nombre de la carrera
+            // Nombre de la ciudad
             $table->string('nombre', 100);
 
-            // Descripcion detallada de la carrera
-            $table->string('descripcion', 180);
-
-            // Disponibilidad de la carrera
-            $table->unsignedTinyInteger('status_id');
-
             $table->unique('nombre');
-            $table->foreign('status_id')->references('id')->on('statuses');
         });
     }
 
@@ -37,6 +30,6 @@ class CreateCarrerasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carreras');
+        Schema::dropIfExists('ciudades');
     }
 }

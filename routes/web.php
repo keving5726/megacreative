@@ -13,4 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::resources([
+    'estudiantes' => 'EstudianteController',
+    'carreras' => 'CarreraController'
+]);

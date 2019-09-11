@@ -13,14 +13,10 @@ class SexosTableSeeder extends Seeder
     {
         DB::table('sexos')->insert([
             'tipo' => 'Masculino',
-            'created_at' => now(),
-            'updated_at' => now()
         ]);
 
         DB::table('sexos')->insert([
             'tipo' => 'Femenino',
-            'created_at' => now(),
-            'updated_at' => now()
         ]);
     }
 }
